@@ -1,7 +1,7 @@
 {
-  "name": "backend-template",
+  "name": "AccountRobot-backend",
   "version": "0.0.0",
-  "description": "backend-template",
+  "description": "backend for facebook bot",
   "scripts": {
     "compile": "babel src -d dist",
     "prestart": "npm run compile",
