@@ -1,11 +1,8 @@
-# backend-template
+# Account Robot Backend
 
-[![Build Status](https://travis-ci.org/geniusgordon/backend-template.svg?branch=master)](https://travis-ci.org/geniusgordon/backend-template)
-
-Backend template using token base authentication
+Where the magic happened
 
 using:
 
 * express
-* mongodb
-* jsonwebtoken
+* torch
