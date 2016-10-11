@@ -5,7 +5,7 @@
   "scripts": {
     "compile": "babel src -d dist",
     "prestart": "npm run compile",
-    "start": "node dist/server.js",
+    "start": "DEBUG=http:*,Bot:* node dist/server.js",
     "start:watch": "nodemon --exec babel-node src/server.js",
     "test": "export NODE_ENV=test && mocha",
     "posttest": "npm run lint",
