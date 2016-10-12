@@ -21,18 +21,18 @@ function download(url, dest, cb) {
 
 photoRouter.post('/', (req, res, next) => {
   console.log(req.body);
-  if (req.body[0].photoUrl !== undefined) {
+  if (req.body.photoUrl !== undefined) {
     const stream = fs.createWriteStream("pic/tasks.txt");
     const photos = req.body;
-    photos.forEach(p => {
-      const id = p.id;
-      const url = p.photoUrl;
-      const dest = `pic/${id}`;
-      stream.write(`${id}\n`);
-      download(url, dest, (err) => {
-        if (err) console.log(err);
-      });
+    
+    const id = p.id;
+    const url = p.photoUrl;
+    const dest = `pic/${id}`;
+    stream.write(`${id}\n`);
+    download(url, dest, (err) => {
+      if (err) console.log(err);
     });
+    
     stream.end();
     
   } else {
