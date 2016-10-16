@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import fs from 'fs';
 import http from 'https';
-import { classifyImage } from '../../controllers';
+import { classifyImage } from '../../controllers/classifyScript';
 
 const imageRouter = new Router();
 
