@@ -2,6 +2,7 @@ import { Router } from 'express';
 import multer from 'multer';
 import fs from 'fs';
 import http from 'https';
+import uuid from 'node-uuid';
 
 const upload = multer({ dest: 'pic/' });
 const photoRouter = new Router();
@@ -25,7 +26,7 @@ photoRouter.post('/', (req, res, next) => {
     const stream = fs.createWriteStream("pic/tasks.txt");
     const photo = req.body;
     
-    const id = photo.id;
+    const id = uuid.v4();
     const url = photo.photoUrl;
     const dest = `pic/${id}`;
     stream.write(`${id}\n`);

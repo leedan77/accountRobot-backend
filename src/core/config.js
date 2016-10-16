@@ -1,6 +1,6 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-export const port = process.env.PORT || 3000;
+export const port = process.env.PORT || 4000;
 export const host = process.env.HOST || `localhost:${port}`;
 
 export const dbUrl = {
