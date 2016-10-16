@@ -23,6 +23,7 @@ local image_url = arg[1]--'http://upload.wikimedia.org/wikipedia/commons/e/e9/Go
 local network_url = 'https://www.dropbox.com/s/npmr5egvjbg7ovb/nin_nobn_final.t7'
 local image_name = string.sub (paths.basename(image_url), 1, 4)
 local network_name = paths.basename(network_url)
+image_url = image_url:gsub('&', '\\&')
 if not paths.filep(image_name) then os.execute('wget ' .. image_url .. ' -O new' .. image_name .. '.jpg')   end
 if not paths.filep(network_name) then os.execute('wget '..network_url)   end
 

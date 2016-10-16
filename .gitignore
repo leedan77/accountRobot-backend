@@ -42,3 +42,6 @@ jspm_packages
 
 dist/
 pic/
+torch/*.jpg
+torch/*.t7
+torch/*.txt
