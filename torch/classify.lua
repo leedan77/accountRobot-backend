@@ -35,7 +35,7 @@ net:evaluate()
 --print '==> Loading synsets'
 --print 'Loads mapping from net outputs to human readable labels'
 local synset_words = {}
-for line in io.lines'synset_words.txt' do table.insert(synset_words, line:sub(11)) end
+for line in io.lines'synset_words_chinese.txt' do table.insert(synset_words, line:sub(11)) end
 
 --print '==> Loading image and imagenet mean'
 local im = image.load('new'.. image_name .. '.jpg')
